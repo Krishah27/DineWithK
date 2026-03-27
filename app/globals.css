@@ -1,26 +1,48 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  --bg:#0b1020;
+  --card:#141a2e;
+  --muted:#98a2b3;
+  --text:#e6e8ef;
+  --brand:#7c5cff;
+  --brand-2:#2dd4bf;
+  --ring:0 0 0 3px rgba(124,92,255,.25);
+  --radius:18px;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(124,92,255,.18), transparent 50%),
+              radial-gradient(1000px 800px at 120% 10%, rgba(45,212,191,.12), transparent 40%),
+              var(--bg);color:var(--text)}
+.container{max-width:1080px;margin:32px auto;padding:0 16px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.title{display:flex;align-items:center;gap:12px}
+.logo{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-weight:700;
+  background: linear-gradient(135deg, var(--brand), #4f46e5 60%);
+  box-shadow:0 10px 30px rgba(124,92,255,.35)}
+h1{font-size:1.6rem;margin:0}
+.subtitle{color:var(--muted);font-size:.95rem;margin-top:4px}
+.panel{background:rgba(20,26,46,.65);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.05);
+  border-radius:var(--radius);padding:16px;box-shadow:0 15px 40px rgba(2,8,23,.45)}
+.filters{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;align-items:end}
+.field{grid-column:span 3}
+.field.wide{grid-column:span 6}
+.label{display:block;font-size:.85rem;color:var(--muted);margin:0 0 6px 6px}
+select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);
+  background:#0f1530;color:var(--text)}
+.btn{padding:12px 16px;border:none;border-radius:14px;background:linear-gradient(135deg,var(--brand),#4f46e5);
+  color:#fff;font-weight:600;cursor:pointer;box-shadow:0 10px 24px rgba(124,92,255,.35)}
+.btn.secondary{background:#0f1530;border:1px solid rgba(255,255,255,.08);box-shadow:none}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:16px}
+.card{grid-column:span 4;background:var(--card);border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius);padding:14px;position:relative}
+.card:hover{box-shadow:0 12px 32px rgba(2,8,23,.6);border-color:rgba(124,92,255,.35)}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:.78rem;
+  background:#0f1530;border:1px solid rgba(255,255,255,.08);color:#cbd5e1}
+.rating{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#22c55e,#16a34a);
+  padding:6px 10px;border-radius:999px;font-weight:700}
+.cuisines{color:#cbd5e1;font-size:.9rem;margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.actions{margin-top:12px;display:flex;gap:10px}
+.footerNote{margin-top:18px;color:var(--muted);font-size:.9rem}
+@media(max-width:960px){.field{grid-column:span 6}.field.wide{grid-column:span 12}.card{grid-column:span 6}}
+@media(max-width:640px){.field,.field.wide{grid-column:span 12}.card{grid-column:span 12}}
