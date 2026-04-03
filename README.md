@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍽️ DineWise — Smart Restaurant Recommender
 
-## Getting Started
+## Live on : https://dine-with-k.vercel.app
 
-First, run the development server:
+Discover restaurants you’ll love!
+DineWise is an intelligent content-based restaurant recommendation system.
+It recommends restaurants based on cuisine, city, and ratings, with a clean dark-themed UI and Google Maps integration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎯 Personalized Recommendations — Pick a restaurant you like & get smart similar suggestions.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🏙️ Filter Options — Search by city, cuisine, or minimum rating.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+⭐ Hybrid Scoring — Combines cuisines + location + ratings for accuracy.
 
-## Learn More
+🗺️ Google Maps Integration — Open restaurants directly on Google Maps.
 
-To learn more about Next.js, take a look at the following resources:
+🎨 Modern Dark UI — Sleek, responsive, and user-friendly frontend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+⚡ Flask Backend — Python Flask serving dataset & powering recommendations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛠️ Tech Stack
 
-## Deploy on Vercel
+Frontend: HTML, CSS, JavaScript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Backend: Flask (Python), Flask-CORS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dataset: JSON (200+ curated Indian restaurants)
+
+Version Control: Git + GitHub
+
+📂 Project Structure
+DineWise/
+│── backend/
+│    ├── app.py                         # Flask backend
+│    └── indian_restaurants_realistic.json
+│
+│── frontend/
+│    ├── index.html                     # Main UI
+│    └── style.css                      # Styling (dark theme)
+│
+│── README.md
+
+🚀 Getting Started
+
+Follow these steps to set up the project locally.
+
+1️⃣ Clone the repository
+git clone https://github.com/Krishah27/DineWise
+cd DineWise
+
+2️⃣ Create a virtual environment (recommended)
+python -m venv venv
+
+
+Activate it:
+
+Windows (PowerShell):
+
+venv\Scripts\activate
+
+
+macOS/Linux:
+
+source venv/bin/activate
+
+3️⃣ Install dependencies
+pip install flask flask-cors pandas
+
+4️⃣ Run the backend server
+cd backend
+python app.py
+
+
+Server will start at:
+👉 http://127.0.0.1:5000
+
+5️⃣ Open the frontend
+
+Go to the frontend folder.
+
+Open index.html in your browser.
+
+Now you can use DineWise 🎉
+
+📚 Academic Angle
+
+DineWise demonstrates:
+
+Content-based filtering
+
+TF-IDF style token overlap
+
+Hybrid recommendation logic
+
+Practical UI integration with Maps
+
+🤝 Contributing
+
+Pull requests are welcome!
+For major changes, please open an issue first to discuss what you’d like to change.
+
+📜 License
+
+This project is licensed under the MIT License.
+
+⭐ If you like this project, don’t forget to give it a star on GitHub!
