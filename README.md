@@ -96,6 +96,13 @@ Hybrid recommendation logic
 
 Practical UI integration with Maps
 
+## Screenshots of Project :
+
+<img width="1397" height="916" alt="Screenshot (213)" src="https://github.com/user-attachments/assets/a245a382-095d-44e7-b70e-1b5ac6dccd33" />
+<img width="1920" height="919" alt="Screenshot (214)" src="https://github.com/user-attachments/assets/709b0c45-6b6c-4f0e-a1cf-4332864be5ab" />
+<img width="1387" height="870" alt="Screenshot (215)" src="https://github.com/user-attachments/assets/bc78c2a7-2938-435b-86e6-8650bd317a2c" />
+
+
 🤝 Contributing
 
 Pull requests are welcome!
